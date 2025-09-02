@@ -1,6 +1,5 @@
-georinexs
+georinex
 numpy
 pandas
-xarray
-warnings
 matplotlib
+prettytable
