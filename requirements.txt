@@ -1,0 +1,6 @@
+georinexs
+numpy
+pandas
+xarray
+warnings
+matplotlib
