@@ -2,7 +2,8 @@
 
 This repo contains my solution to the two projects in TBA4565 Module GPS. 
 
-> Project1: GPS Absolute Point Positioning with code pseudorange. 
+> Project1: GPS Absolute Point Positioning with code pseudorange.
+
 > Project2: Accurate Relative Positioning with Carrier Phases
 
 ---
