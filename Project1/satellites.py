@@ -165,4 +165,3 @@ for sv in satellite_positions.keys():
         dZ = satellite_positions[sv][2] - satellite_positions_no_corr[sv][2]
         t_diff.add_row([sv, dX, dY, dZ])
 print(t_diff)
-
