@@ -247,7 +247,7 @@ def evaluate_candidate(rover_B_seed, base_A, amb_tuple):
     ssr, x_hat_xyz = weighted_ssr(A_fixed, L_fixed, P)
     return ssr, pos_xyz, A_fixed, L_fixed
 
-# Build candidates using ±3σ (scenario c)
+# Build candidates using +-3 sigma (scenario c)
 cands = generate_ambiguity_combinations(final_ambiguities, amb_std_devs, k=3)
 print(f"Testing {len(cands)} ambiguity combinations...")
 
@@ -266,7 +266,7 @@ print("Best ambiguities (cycles):", best_ambs)
 print("Best weighted SSR v^T P v:", best_ssr)
 print("Second/best ratio:", ratio)
 
-# (Optional) pick best if ratio ≥ ~2–3, per slides; else fall back to float solution.
+
 chosen_pos = best_pos  # if ratio >= 2 or 3
 
 # Convert to geodetic

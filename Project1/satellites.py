@@ -45,7 +45,7 @@ omega_e = 7.2921151467e-5 # rad/s
 pi = np.pi
 c = 299792458 # m/s
 
-# Time from ephemerides to reference epoch
+# Time from ephemerides to reference epoch Ctk
 def tk(t, toe):
     tk = t - toe 
     if tk > 302400:
@@ -165,3 +165,23 @@ for sv in satellite_positions.keys():
         dZ = satellite_positions[sv][2] - satellite_positions_no_corr[sv][2]
         t_diff.add_row([sv, dX, dY, dZ])
 print(t_diff)
+
+#Graph to show the difference between corrected and uncorrected positions
+import matplotlib.pyplot as plt
+labels = list(satellite_positions.keys())
+dX = [satellite_positions[sv][0] - satellite_positions_no_corr[sv][0] for sv in labels]
+dY = [satellite_positions[sv][1] - satellite_positions_no_corr[sv][1] for sv in labels]
+dZ = [satellite_positions[sv][2] - satellite_positions_no_corr[sv][2] for sv in labels]
+x = np.arange(len(labels))  # the label locations
+width = 0.2  # the width of the bars
+fig, ax = plt.subplots()
+rects1 = ax.bar(x - width, dX, width, label='dX')
+rects2 = ax.bar(x, dY, width, label='dY')
+rects3 = ax.bar(x + width, dZ, width, label='dZ')
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Difference (m)')
+ax.set_title('Difference between corrected and uncorrected satellite positions')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+plt.show()
