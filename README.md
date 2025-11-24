@@ -1,6 +1,6 @@
 # TBA4565 Module GPS
 
-This repo contains my solution to the two projects in TBA4565 Module GPS. 
+This repo contains my solution to the two projects in TBA4565 Geomatics, Specialization Course Module GPS. 
 
 > Project1: GPS Absolute Point Positioning with code pseudorange.
 
@@ -27,13 +27,13 @@ python3 -m venv .venv
 
 # 3) Activate the virtual environment
 
-# macOS/linux:
+macOS/linux:
 source .venv/bin/activate
 
-# Windows PowerShell:
+Windows PowerShell:
 .venv\Scripts\Activate.ps1
 
-# Windows CMD:
+Windows CMD:
 .venv\Scripts\activate.bat
 
 # 4) Install project dependencies
