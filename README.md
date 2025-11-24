@@ -23,7 +23,7 @@ git clone https://github.com/mortened/TBA4565-GPS.git
 cd TBA4565-GPS
 
 # 2) Create & activate a virtualenv 
-python3 -m venv .venv
+python -m venv .venv
 
 # 3) Activate the virtual environment
 
